@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Como o Next.js melhora o SEO de um blog",
+    "slug": "como-o-nextjs-melhora-o-seo-de-um-blog",
+    "author": "Thamires Gabriel",
+    "date": "2026-04-27",
+    "description": "Entenda como o Next.js ajuda a criar páginas rápidas, organizadas e otimizadas para mecanismos de busca.",
+    "content": "O Next.js melhora o SEO porque permite renderizar páginas no servidor, criar metadados personalizados e organizar rotas de forma clara."
+  },
+  {
+    "id": 2,
+    "title": "O que são rotas dinâmicas no App Router",
+    "slug": "o-que-sao-rotas-dinamicas-no-app-router",
+    "author": "Thamires Gabriel",
+    "date": "2026-04-27",
+    "description": "Veja como as rotas dinâmicas permitem criar páginas individuais para cada artigo usando o slug.",
+    "content": "Rotas dinâmicas são rotas que mudam de acordo com uma informação variável, como o slug de um artigo."
+  },
+  {
+    "id": 3,
+    "title": "Data Fetching com Server Components",
+    "slug": "data-fetching-com-server-components",
+    "author": "Thamires Gabriel",
+    "date": "2026-04-27",
+    "description": "Aprenda por que não é necessário usar useEffect para buscar dados em páginas do App Router.",
+    "content": "No App Router, as páginas são Server Components por padrão. Isso permite buscar dados diretamente com async e await."
+  }
+]
