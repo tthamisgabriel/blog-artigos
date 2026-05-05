@@ -19,6 +19,12 @@ Projeto desenvolvido com Next.js utilizando App Router, rotas dinâmicas, Server
 - CSS
 - App Router
 
+## Link do projeto publicado
+
+A aplicação está disponível em:
+
+https://blog-artigos-mu.vercel.app/
+
 ## Como rodar
 
 ```bash
