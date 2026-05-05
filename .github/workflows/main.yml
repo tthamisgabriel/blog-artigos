@@ -9,8 +9,8 @@ on:
       - main
 
 jobs:
-  ci:
-    name: Validar código e build
+  lint:
+    name: Validar código com ESLint
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +20,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Instalar dependências
         run: npm ci
@@ -28,8 +28,42 @@ jobs:
       - name: Rodar ESLint
         run: npm run lint
 
+  test:
+    name: Rodar testes
+    runs-on: ubuntu-latest
+    needs: lint
+
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar dependências
+        run: npm ci
+
       - name: Rodar testes
         run: npm run test
+
+  build:
+    name: Build da aplicação
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalar dependências
+        run: npm ci
 
       - name: Rodar build
         run: npm run build
